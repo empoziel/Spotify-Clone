@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background: black;
+  overflow-x: hidden;
+  font-family: "poppins";
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 15px;
+}
+aside img {
+  max-width: 130px;
+  cursor: pointer;
+}
+aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+aside nav a {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  border-radius: 10px;
+}
+aside nav a:hover {
+  background: #1db954;
+}
+
+main {
+  width: 100%;
+  background: rgb(40, 40, 40);
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  padding: 10px;
+}
+main header form {
+  display: flex;
+}
+main header form input {
+  color: black;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+}
+main header form button {
+  padding: 0 25px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  background: #1db954;
+}
+main header ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  font-size: 15px;
+}
+main header ul li {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+main header ul li:hover {
+  background: #0ab536;
+}
+
+main .songs h2 {
+  padding: 20px;
+}
+main .songs .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+main .songs .list .card {
+  width: 160px;
+  padding: 15px;
+  background: #181818;
+  border-radius: 6px;
+  cursor: pointer;
+}
+main .songs .list .card:hover .play {
+  bottom: 20px;
+  opacity: 1;
+}
+main .songs .list .card h4 {
+  margin-bottom: 6px;
+}
+main .songs .list .card figure {
+  position: relative;
+}
+main .songs .list .card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+main .songs .list .card .play {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  bottom: -20px;
+  background: rgb(20, 73, 20);
+  border-radius: 50%;
+  font-size: 20px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+main .songs .list .card .play:hover {
+  background: rgb(29, 198, 29);
+}
+
+.playing {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 10px 40px;
+  width: 100%;
+  background-color: #0ab536;
+  background-image: linear-gradient(122deg, #0ab536 0%, #34a45c 50%, #163b91 100%);
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+.playing .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.playing .info p:nth :nth-child(1) {
+  margin-bottom: 5px;
+  color: rgb(214, 214, 214);
+}
+.playing .info img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.animate {
+  animation: turn 3s linear infinite;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.load-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.loader {
+  display: none;
+  border: 16px solid #4e4949;
+  border-top: 16px solid #0ab536;
+  border-radius: 50%;
+  margin-top: 70px;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+.loader.active {
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
